@@ -138,6 +138,18 @@
         line-height: 2;
     }
 
+    .card a {
+        color: var(--text-main);
+        text-decoration: none;
+        border-bottom: 1px solid var(--line-color);
+        transition: opacity 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card a:hover {
+        opacity: 0.65;
+        border-color: var(--text-main);
+    }
+
     .button {
         display: inline-flex;
         align-items: center;
@@ -224,11 +236,11 @@
                 <p>Market entry and cross-border growth for pet businesses.</p>
             </div>
             <div class="card">
-                <h3>PET GROOMING</h3>
-                <p>For grooming services, please visit our partner platform.</p>
+                <h3><a href="https://www.furrari.one" target="_blank" rel="noopener">PET GROOMING</a></h3>
+                <p>For grooming services, please visit <a href="https://www.furrari.one" target="_blank" rel="noopener">furrari.one</a>.</p>
             </div>
         </div>
-        <a href="https://furrari.one" class="button" target="_blank">furrari.one <span>→</span></a>
+        <a href="https://www.furrari.one" class="button" target="_blank" rel="noopener">furrari.one <span>→</span></a>
     </div>
 
     <div class="section">
