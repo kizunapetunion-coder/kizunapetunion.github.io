@@ -37,40 +37,27 @@
     }
 
     .hero {
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         position: relative;
+        box-sizing: border-box;
+        padding-top: 36px;
+        padding-bottom: 36px;
     }
 
     .hero-logo {
-        width: min(520px, 86vw);
+        width: min(360px, 82vw);
+        max-height: 68vh;
         height: auto;
-        margin-bottom: 34px;
-        border-radius: 18px;
-        box-shadow: 0 24px 60px rgba(44, 44, 44, 0.10);
-    }
-
-    .hero h1 {
-        font-size: clamp(40px, 6vw, 72px);
-        letter-spacing: 0.15em;
-        margin: 0;
-        color: var(--text-main);
-    }
-
-    .hero .sub {
-        margin-top: 15px;
-        letter-spacing: 0.3em;
-        font-size: 12px;
-        color: var(--text-muted);
-        text-transform: uppercase;
+        display: block;
     }
 
     .hero .tagline {
-        margin-top: 38px;
+        margin-top: 34px;
         font-size: 18px;
         line-height: 2.2;
         letter-spacing: 0.05em;
@@ -79,9 +66,9 @@
 
     .vertical-line {
         width: 1px;
-        height: 80px;
+        height: 70px;
         background: var(--line-color);
-        margin: 50px auto 0;
+        margin: 42px auto 0;
     }
 
     .section {
@@ -194,8 +181,9 @@
     }
 
     @media (max-width: 768px) {
-        .hero { padding-top: 60px; height: auto; min-height: 90vh; }
-        .hero-logo { width: min(420px, 90vw); margin-bottom: 28px; }
+        .hero { min-height: 92vh; padding-top: 28px; padding-bottom: 28px; }
+        .hero-logo { width: min(320px, 86vw); max-height: 62vh; }
+        .hero .tagline { margin-top: 28px; font-size: 16px; }
         .section { padding: 80px 0; }
         .card { padding: 25px; }
     }
@@ -206,8 +194,6 @@
 
 <div class="container hero">
     <img class="hero-logo" src="assets/kizuna-logo.svg" alt="Kizuna Pet Union logo">
-    <h1>KIZUNA</h1>
-    <div class="sub">PET UNION</div>
 
     <div class="tagline">
         Built on Trust.<br>
