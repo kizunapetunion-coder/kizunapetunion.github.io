@@ -11,10 +11,10 @@
 
 <style>
     :root {
-        --bg-color: #F7F5F0; /* 和紙米白色 */
-        --text-main: #2C2C2C; /* 墨灰色 */
-        --text-muted: #7A7A7A; /* 淺灰色 */
-        --line-color: #D4D0C5; /* 柔和的邊界線 */
+        --bg-color: #F7F5F0;
+        --text-main: #2C2C2C;
+        --text-muted: #7A7A7A;
+        --line-color: #D4D0C5;
     }
 
     body {
@@ -25,7 +25,6 @@
         -webkit-font-smoothing: antialiased;
     }
 
-    /* 標題與特殊排版使用明體 */
     h1, h2, h3, .serif, .tagline {
         font-family: 'Noto Serif JP', "Hiragino Mincho ProN", "Yu Mincho", serif;
         font-weight: 400;
@@ -37,7 +36,6 @@
         padding: 0 30px;
     }
 
-    /* --- HERO SECTION --- */
     .hero {
         height: 100vh;
         display: flex;
@@ -46,6 +44,14 @@
         align-items: center;
         text-align: center;
         position: relative;
+    }
+
+    .hero-logo {
+        width: min(520px, 86vw);
+        height: auto;
+        margin-bottom: 34px;
+        border-radius: 18px;
+        box-shadow: 0 24px 60px rgba(44, 44, 44, 0.10);
     }
 
     .hero h1 {
@@ -64,27 +70,25 @@
     }
 
     .hero .tagline {
-        margin-top: 50px;
+        margin-top: 38px;
         font-size: 18px;
         line-height: 2.2;
         letter-spacing: 0.05em;
         color: var(--text-main);
     }
 
-    /* 日式經典的垂直細線 */
     .vertical-line {
         width: 1px;
         height: 80px;
         background: var(--line-color);
-        margin: 60px auto 0;
+        margin: 50px auto 0;
     }
 
-    /* --- SECTIONS --- */
     .section {
         padding: 120px 0;
         border-bottom: 1px solid var(--line-color);
     }
-    
+
     .section:last-child {
         border-bottom: none;
     }
@@ -115,7 +119,6 @@
         color: #4A4A4A;
     }
 
-    /* --- GRID & CARDS --- */
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -148,7 +151,6 @@
         line-height: 2;
     }
 
-    /* --- BUTTON & LINKS --- */
     .button {
         display: inline-flex;
         align-items: center;
@@ -175,7 +177,6 @@
         transform: translateX(5px);
     }
 
-    /* --- CONTACT & FOOTER --- */
     .contact-info {
         margin-top: 30px;
     }
@@ -194,6 +195,7 @@
 
     @media (max-width: 768px) {
         .hero { padding-top: 60px; height: auto; min-height: 90vh; }
+        .hero-logo { width: min(420px, 90vw); margin-bottom: 28px; }
         .section { padding: 80px 0; }
         .card { padding: 25px; }
     }
@@ -203,6 +205,7 @@
 <body>
 
 <div class="container hero">
+    <img class="hero-logo" src="assets/kizuna-logo.svg" alt="Kizuna Pet Union logo">
     <h1>KIZUNA</h1>
     <div class="sub">PET UNION</div>
 
